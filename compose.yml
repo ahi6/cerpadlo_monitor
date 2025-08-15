@@ -1,0 +1,24 @@
+version: "3"
+services:
+  cerpadlo-scraper:
+    image: cerpadlo:latest
+    volumes: 
+      - ./config.ini:/cerpadlo/config.ini
+    network_mode: host 
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - 3000:3000
+    volumes:
+      - /var/cerp/grafana:/var/lib/grafana
+    network_mode: bridge 
+
+  influx:
+    image: influxdb:2-alpine
+    ports:
+      - 8086:8086
+    volumes:
+      - /var/cerp/influx/data:/var/lib/influxdb2
+      - /var/cerp/influx/config:/etc/influxdb2
+    network_mode: bridge 

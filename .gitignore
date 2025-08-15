@@ -1,0 +1,7 @@
+data/
+.history/
+.mypy_cache/
+.direnv/
+config.ini
+__pycache__
+_backup

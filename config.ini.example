@@ -1,0 +1,11 @@
+[DEFAULT]
+address = 192.168.0.1
+uname = your_username
+passw = your_password
+influx_token = your_influxdb_token
+influx_org = your_influxdb_org
+influx_url = http://localhost:8086
+influx_bucket = your_influxdb_bucket
+resource = STATUS
+everything = STATUS,MAIN1,STAVJED1
+cookie = 12345678
