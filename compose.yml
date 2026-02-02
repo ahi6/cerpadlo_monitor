@@ -1,7 +1,7 @@
 version: "3"
 services:
   cerpadlo-scraper:
-    image: cerpadlo:latest
+    image: cerpadlo-scraper:latest
     volumes: 
       - ./config.ini:/cerpadlo/config.ini
     network_mode: host 
